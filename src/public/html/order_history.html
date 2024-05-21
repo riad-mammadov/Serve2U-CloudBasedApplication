@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/success.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Order History - Serve2U</title>
+</head>
+
+<!-- Displays the order history of the account and shows all orders that have been completed by staff-->
+
+<body class="main-body">
+    <header class="main-header">
+        <nav class="navbar">
+            <img src="./images/Serve2ULogo.png" alt="Serve2U Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="http://localhost:8080/src/public/html/cart.html">Order Now</a></li>
+                <li><button id="logoutButton" class="logout-button">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="history">
+            <h1>My Order History</h1>
+            <div id="userOrderHistoryContainer"></div>
+        </section>
+    </main>
+
+    <script src="../orderhistory.js"></script>
+</body>
+
+</html>

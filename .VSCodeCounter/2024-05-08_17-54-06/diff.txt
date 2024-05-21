@@ -1,0 +1,99 @@
+Date : 2024-05-08 17:54:06
+Directory : /Users/riadmammadov/Documents/Individual Project/Code/src
+Total : 60 files,  4265 codes, 238 comments, 1207 blanks, all 5710 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| CSS        |          8 |      1,914 |         49 |        635 |      2,598 |
+| JavaScript |         17 |        771 |         75 |        206 |      1,052 |
+| PHP        |         24 |        695 |         62 |        211 |        968 |
+| TypeScript |          8 |        453 |         26 |        115 |        594 |
+| HTML       |          3 |        432 |         26 |         40 |        498 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                            | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                               |         60 |      4,265 |        238 |      1,207 |      5,710 |
+| . (Files)                                                                                       |          2 |         63 |          0 |         26 |         89 |
+| controllers                                                                                     |          3 |        199 |         16 |         53 |        268 |
+| middleware                                                                                      |          1 |         62 |          5 |         13 |         80 |
+| public                                                                                          |         52 |      3,812 |        212 |      1,092 |      5,116 |
+| public (Files)                                                                                  |         10 |      1,658 |        147 |        407 |      2,212 |
+| public/backend                                                                                  |         24 |        695 |         62 |        211 |        968 |
+| public/css                                                                                      |          8 |      1,914 |         49 |        635 |      2,598 |
+| public/html                                                                                     |         10 |       -455 |        -46 |       -161 |       -662 |
+| services                                                                                        |          1 |        121 |          5 |         22 |        148 |
+| types                                                                                           |          1 |          8 |          0 |          1 |          9 |
+| types/express                                                                                   |          1 |          8 |          0 |          1 |          9 |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                        | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/riadmammadov/Documents/Individual Project/Code/src/app.ts                                | TypeScript |         42 |          0 |         18 |         60 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/controllers/auth.controller.ts        | TypeScript |        163 |          6 |         33 |        202 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/controllers/home.controller.ts        | TypeScript |         16 |          5 |          9 |         30 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/controllers/protected.controller.ts   | TypeScript |         20 |          5 |         11 |         36 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/middleware/auth.middleware.ts         | TypeScript |         62 |          5 |         13 |         80 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/additem.php            | PHP        |         44 |          9 |         17 |         70 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/applyDiscount.php      | PHP        |         41 |          4 |          9 |         54 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/cancelorder.php        | PHP        |         22 |          3 |          8 |         33 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/completeorder.php      | PHP        |         29 |          4 |         10 |         43 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/dbconnection.php       | PHP        |         10 |          1 |          6 |         17 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/deleteDiscount.php     | PHP        |         21 |          0 |          7 |         28 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/deleteOrderHistory.php | PHP        |         28 |          5 |          9 |         42 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/deleteReview.php       | PHP        |         15 |          3 |          5 |         23 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/editItem.php           | PHP        |         21 |          2 |         10 |         33 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/getOrders.php          | PHP        |         48 |          2 |         11 |         61 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/getReviews.php         | PHP        |         13 |          0 |          4 |         17 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/getReviewsStaff.php    | PHP        |         20 |          1 |          7 |         28 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/getUserDetails.php     | PHP        |         13 |          0 |          7 |         20 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/getdata.php            | PHP        |         14 |          0 |          6 |         20 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/getproducts.php        | PHP        |         18 |          3 |          9 |         30 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/item.php               | PHP        |         17 |          3 |          4 |         24 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/listDiscounts.php      | PHP        |         14 |          0 |          5 |         19 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/maindata.php           | PHP        |         49 |          3 |          6 |         58 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/myserver.php           | PHP        |         84 |          8 |         28 |        120 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/orderhistorydata.php   | PHP        |         40 |          2 |          9 |         51 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/removeItem.php         | PHP        |         28 |          3 |         10 |         41 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/setDiscount.php        | PHP        |         21 |          0 |          8 |         29 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/submitReviews.php      | PHP        |         22 |          0 |          7 |         29 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/backend/viewdetailmodal.php    | PHP        |         63 |          6 |          9 |         78 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/cart.js                        | JavaScript |        390 |         37 |         92 |        519 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/dashboard.css              | CSS        |        349 |          7 |        115 |        471 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/forgotpass.css             | CSS        |         73 |          0 |          9 |         82 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/index.css                  | CSS        |        321 |          4 |        122 |        447 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/orderpage.css              | CSS        |        700 |         11 |        278 |        989 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/signin.css                 | CSS        |         91 |          9 |         21 |        121 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/signup.css                 | CSS        |        108 |         10 |         19 |        137 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/success.css                | CSS        |        208 |          0 |         61 |        269 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/css/verification.css           | CSS        |         64 |          8 |         10 |         82 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/dashboard.js                   | JavaScript |        771 |         75 |        206 |      1,052 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/cart.js                   | JavaScript |       -390 |        -37 |        -92 |       -519 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/index.html                | HTML       |        -60 |          0 |        -15 |        -75 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/index.js                  | JavaScript |        -74 |         -9 |        -22 |       -105 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/orderhistory.js           | JavaScript |        -82 |         -5 |        -18 |       -105 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/signin.js                 | JavaScript |        -55 |         -3 |        -11 |        -69 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/signup.js                 | JavaScript |        -41 |         -5 |         -5 |        -51 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/staffdashboard.html       | HTML       |        432 |         26 |         40 |        498 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/staffsignin.js            | JavaScript |        -56 |         -3 |        -12 |        -71 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/success.js                | JavaScript |        -97 |         -6 |        -21 |       -124 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/verify.js                 | JavaScript |        -32 |         -4 |         -5 |        -41 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/index.html                     | HTML       |         60 |          0 |         15 |         75 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/index.js                       | JavaScript |         74 |          9 |         22 |        105 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/orderhistory.js                | JavaScript |         82 |          5 |         18 |        105 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/signin.js                      | JavaScript |         55 |          3 |         11 |         69 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/signup.js                      | JavaScript |         41 |          5 |          5 |         51 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/staffsignin.js                 | JavaScript |         56 |          3 |         12 |         71 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/success.js                     | JavaScript |         97 |          6 |         21 |        124 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/verify.js                      | JavaScript |         32 |          4 |          5 |         41 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/server.ts                             | TypeScript |         21 |          0 |          8 |         29 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/services/cognito.service.ts           | TypeScript |        121 |          5 |         22 |        148 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/types/express/index.d.ts              | TypeScript |          8 |          0 |          1 |          9 |
+| Total                                                                                           |            |      4,265 |        238 |      1,207 |      5,710 |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

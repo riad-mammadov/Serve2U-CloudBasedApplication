@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- For this page a tutorial was followed for the authentication using cognito, as it was the first time implementing and using 
+    AWS Cognito  
+
+https://www.youtube.com/watch?v=AQfA7OQEMqg&list=PLPMbb3KXRmigGdxkvrGfR4RmsU4J78_BQ
+
+This tutorial works on setting up all the routes and endpoints necessary, giving me a base to start off with, as to which i then implemented
+to work with the input field in the form and adjusted it according to my project needs
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/css/signin.css">
+</head>
+
+
+
+<body class="normal">
+    <img src="./images/Serve2ULogo.png" alt="Serve2U Logo" class="logo2">
+
+    <div class="signin-container">
+        <form id="signInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="seat-number">Seat Number:</label>
+            <input type="number" id="seat-number" name="seat-number" min="1" max="999" required>
+            <label for="seat-number">Seat Row:</label>
+            <input type="number" id="seatrow" name="seatrow" min="1" max="999" required>
+            <label for="stadium">Stadium:</label>
+            <select id="stadium" name="stadium" required>
+                <option value="">--Select a Stadium--</option>
+                <option value="anfield">Anfield (Liverpool)</option>
+                <option value="old_trafford">Old Trafford (Manchester United)</option>
+                <option value="etihad">Etihad Stadium (Manchester City)</option>
+                <option value="stamford_bridge">Stamford Bridge (Chelsea)</option>
+                <option value="emirates">Emirates Stadium (Arsenal)</option>
+                <option value="tottenham_hotspur_stadium">Tottenham Hotspur Stadium (Tottenham)</option>
+            </select>
+            <button type="submit">Sign In</button>
+            <a href="./forgot-password.html">Forgot Password?</a>
+            <a href="../index.html">Back to Home</a>
+
+
+        </form>
+    </div>
+
+    <script src="/signin.js"></script>
+</body>
+
+</html>

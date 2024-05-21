@@ -1,0 +1,117 @@
+<!-- For this page a tutorial was followed however the design was completely refined along with the functionality, but the core base of the
+cart.html page uses this tutorial to help as it was the first time implementing a payment system into a project 
+
+https://www.youtube.com/watch?v=LgnITjRQnlM
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/orderpage.css">
+    <title>Shopping Cart</title>
+
+</head>
+
+<body>
+    <a class="back" href="http://localhost:3000">
+        <i class="fa-solid fa-circle-left"></i>
+    </a>
+    <header>
+        <h1 class="menu-title">Serve2U Menu</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search menu...">
+    </div>
+    <section class="menu">
+
+        <!-- Filter buttons for filtering items based on category-->
+
+        <div class="filter-buttons">
+            <button id="allBtn" class="btn filter-btn">All</button>
+            <button id="foodBtn" class="btn filter-btn">Food</button>
+            <button id="drinksBtn" class="btn filter-btn">Drinks</button>
+            <button id="snacksBtn" class="btn filter-btn">Snacks</button>
+            <button class="btn cartBtn">Basket</button>
+
+        </div>
+
+
+
+    </section>
+
+    <!-- Modal for reviews to pop up and show reviews on specific product-->
+    <div id="reviewsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Product Reviews</h2>
+            <div class="reviews-container"></div>
+        </div>
+    </div>
+
+
+    <section class="shop">
+        <div class="item-container">
+        </div>
+    </section>
+    <section class="cart">
+        <button class="btn close-cart-btn">&times;</button>
+
+        <table>
+
+            <!-- Cart section contents, items get inserted into the body-->
+
+            <thead class="thead">
+                <tr>
+                    <th colspan='2'>Item</th>
+                    <th>Price</th>
+                    <th colspan="2">Quantity</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+
+
+                <tr class="totalRow">
+                    <td colspan="5">Total: £0.00</td>
+                    <div class="discount-display" style="display: none; color: red; font-weight: bold;"></div>
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="schedule-order">
+            <label>
+                <input type="checkbox" id="scheduleOrderCheckbox"> Schedule Order
+            </label>
+            <input type="time" id="scheduleTimeInput" style="display: none">
+        </div>
+
+        <textarea id="notesInput" placeholder="Add any notes for your order here..." maxlength="75"></textarea>
+        <button class="btn checkout-btn" disabled>Checkout Now!</button>
+        <button class="btn discountBtn">Apply Discount Code</button>
+
+    </section>
+
+    <!-- Discount Code Modal -->
+    <div id="discountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Apply Discount Code</h2>
+            <h4>Disclaimer: If you apply the discount on your account and then log out without checking out, your
+                discount
+                will be removed and
+                you will not be able to use it again. </h4>
+            <input type="text" id="discountCodeInput" placeholder="Enter Discount Code">
+            <button class="btn applyDiscountButton" onclick="applyDiscount()">Apply Discount</button>
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="http://localhost:3000/cart.js" defer></script>
+</body>
+
+</html>

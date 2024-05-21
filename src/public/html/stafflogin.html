@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- For this page a tutorial was followed for the authentication using cognito, as it was the first time implementing and using 
+    AWS Cognito  
+
+https://www.youtube.com/watch?v=AQfA7OQEMqg&list=PLPMbb3KXRmigGdxkvrGfR4RmsU4J78_BQ
+
+This tutorial works on setting up all the routes and endpoints necessary, giving me a base to start off with, as to which i then implemented
+to work with the input field in the form whilst adding other functionalities such as a staff login where a user must be registered as a staff
+on the AWS Cognito User Pool in order to be able to log in as a staff
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/css/signin.css">
+</head>
+
+
+<body>
+    <img src="../Serve2ULogo.png" alt="Serve2U Logo" class="logo">
+
+    <div class="signin-container">
+
+        <form id="staffSignInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <a href="./forgot-password.html">Forgot Password?</a>
+        <a href="../index.html">Back to Home</a>
+
+    </div>
+
+    <script src="/staffsignin.js"></script>
+</body>
+
+</html>

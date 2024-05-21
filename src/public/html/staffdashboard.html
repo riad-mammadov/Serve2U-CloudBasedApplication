@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<!-- For this page the structure was taken from a bootstrap tutorial as i had never used it before, and was then modified to tailor to 
+the needs of my project and staff dashboard requirements. 
+
+The github for this along with the CSS = https://github.com/codzsword/bootstrap-admin-dashboard/blob/main/index.html
+
+The javascript was adopted however was completely altered as i added my own functionality to the dashboard.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serve2U Staff Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/dashboard.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-header">
+                            Staff Menu
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" id="ordersOverview" class="sidebar-link"> <!-- OVERVIEW-->
+                                <i class="fa-solid fa-list pe-2"></i>
+                                Overview
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                                aria-expanded="false"><i class="fa-solid fa-file-lines pe-2"></i>
+                                Orders
+                            </a>
+                            <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link manage-orders-link">Manage Order</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link order-history-link">Order History</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link additem">Add Item to Menu</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link removeItem">Edit or Remove Item</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-target="#reviews"
+                                data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fa-solid fa-comment-dots pe-2"></i>
+                                Reviews
+                            </a>
+                            <ul id="reviews" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link manage-reviews-link">Manage Reviews</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-target="#usersMenu"
+                                data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fa-solid fa-users pe-2"></i>
+                                Users
+                            </a>
+                            <ul id="usersMenu" class="sidebar-dropdown list-unstyled collapse"
+                                data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link viewUserDetails">View User Details</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-target="#discountMenu"
+                                data-bs-toggle="collapse" aria-expanded="false">
+                                <i class="fa-solid fa-tags pe-2"></i>
+                                Discounts
+                            </a>
+                            <ul id="discountMenu" class="sidebar-dropdown list-unstyled collapse"
+                                data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link addDiscount">Add Discount</a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link manage-discounts-link">Manage Discounts</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                                aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                                Profile
+                            </a>
+                            <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link logout-button" onclick="logout()">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <div class="mb-3">
+                        <h4>Staff Dashboard</h4>
+                    </div>
+                    <!-- Overview section-->
+                    <div class="row">
+                        <div class="col-12 col-md-6 d-flex">
+                            <div id="welcomeSection" class="card flex-fill border-0 illustration">
+                                <div class="card-body p-0 d-flex flex-fill">
+                                    <div class="row g-0 w-100">
+                                        <div class="col-6">
+                                            <div class="p-3 m-1">
+                                                <h4>Welcome Back, Staff</h4>
+                                                <p class="mb-0">Staff Dashboard, Serve2U</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 align-self-end text-end">
+                                            <img src="./images/Serve2ULogo.png" class="img-fluid illustration-img"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex">
+                            <div id="earningsSection" class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mb-2">
+                                            </h4>
+                                            <p class="mb-2">
+                                                Total Earnings of Serve2U
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="overview" class="card border-0">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                Recent Orders
+                            </h5>
+                            <h6 class="card-subtitle text-muted">
+                                Most recent orders made from customers of Serve2U
+                            </h6>
+                        </div>
+                        <div class="dashboard-section"> <!-- ORDER OVERVIEW -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order ID</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Seat</th>
+                                        <th scope="col">Stadium</th>
+                                        <th scope="col">Seat Row</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- All orders get pushed into here-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section" id="manageOrders" style="display: none;"> <!-- Manage 0rders section -->
+                    <h2>Manage Orders</h2>
+                    <input type="text" id="orderIdFilter" onkeyup="filterById()" placeholder="Search for Order IDs..">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownStadiumButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter by Stadium
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownStadiumButton">
+                            <li><a class="dropdown-item" href="#" data-stadium="all">All</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="anfield">Anfield (Liverpool)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="old_trafford">Old Trafford (Manchester
+                                    United)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="etihad">Etihad Stadium (Manchester
+                                    City)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="stamford_bridge">Stamford Bridge
+                                    (Chelsea)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="emirates">Emirates Stadium (Arsenal)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" data-stadium="tottenham_hotspur_stadium">Tottenham
+                                    Hotspur Stadium (Tottenham)</a></li>
+                        </ul>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Total</th>
+                                <th>Date</th>
+                                <th>Username</th>
+                                <th>Products</th>
+                                <th>Stadium</th>
+                                <th>Seat Row</th>
+                                <th>Seat Number</th>
+                                <th>Order Notes</th>
+                                <th>Scheduled Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- dynamically inserts order rows -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Order Details Modal -->
+                <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="orderDetailsModalLabel">Order Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Order details will be dynamically inserted here -->
+                                <div id="orderDetailsContainer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="dashboard-section" id="orderhistory" style="display: none;"> <!-- ORDER HISTORY -->
+                    <h2>Order History</h2>
+
+                    <div id="earningsSection2" class="card flex-fill border-0">
+                        <div class="card-body py-3">
+                            <div class="d-flex align-items-start">
+                                <div class="flex-grow-1">
+                                    <h4 class="mb-3" id="totalEarningsDisplay"></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+
+                        <!-- Username filter Input -->
+                        <input type="text" id="usernameFilter" placeholder="Search by Username"
+                            onkeyup="filterByUsername()">
+
+                        <!-- Stadium filter drop down menu for Order History -->
+                        <button class="btn btn-primary dropdown-toggle" type="button"
+                            id="orderHistoryStadiumDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter by Stadium
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="orderHistoryStadiumDropdownButton">
+                            <li><a class="dropdown-item" href="#" data-stadium="all">All</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="anfield">Anfield (Liverpool)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="old_trafford">Old Trafford (Manchester
+                                    United)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="etihad">Etihad Stadium (Manchester
+                                    City)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" data-stadium="stamford_bridge">Stamford Bridge
+                                    (Chelsea)</a></li>
+                            <li><a class="dropdown-item" href="#" data-stadium="emirates">Emirates Stadium (Arsenal)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" data-stadium="tottenham_hotspur_stadium">Tottenham
+                                    Hotspur
+                                    Stadium (Tottenham)</a></li>
+                        </ul>
+
+                        <button id="deleteSelectedOrders" onclick="deleteSelectedOrders()">Delete Selected
+                            Orders</button>
+
+                    </div>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Stadium</th>
+                                <th scope="col">Products</th>
+                            </tr>
+                        </thead>
+                        <tbody> <!-- All orders get pushed into here-->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ADd Item section  -->
+
+                <div class="dashboard-section" id="addItemSection" style="display: none;">
+                    <h2>Add Item to Menu</h2>
+                    <form id="addItemForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="itemName" class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="itemName" name="itemName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemPrice" class="form-label">Price (in pence)</label>
+                            <input type="number" class="form-control" id="itemPrice" name="itemPrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemCategory" class="form-label">Category</label>
+                            <select class="form-select" id="itemCategory" name="itemCategory" required>
+                                <option value="food">Food</option>
+                                <option value="drinks">Drinks</option>
+                                <option value="snacks">Snacks</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemImage" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="itemImage" name="itemImage" accept="image/*"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Item</button>
+                    </form>
+                </div>
+
+                <!-- Remove Item from Menu Section -->
+                <div class="dashboard-section" id="removeItemSection" style="display: none;">
+                    <h2>Remove or Edit Item from Menu</h2>
+                    <ul id="menuItemsList" class="list-group mt-3">
+                        <!-- Menu items will be listed here -->
+                    </ul>
+                </div>
+
+                <!-- Edit / Remove Item Modal -->
+                <div class="modal fade" id="editItemModal" tabindex="-1" aria-labelledby="editItemModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editItemModalLabel">Edit Menu Item</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="editItemForm">
+                                    <input type="hidden" id="editItemId" name="itemId">
+                                    <div class="mb-3">
+                                        <label for="editItemName" class="form-label">Item Name</label>
+                                        <input type="text" class="form-control" id="editItemName" name="itemName"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="editItemPrice" class="form-label">Price (in pence)</label>
+                                        <input type="number" class="form-control" id="editItemPrice" name="itemPrice"
+                                            required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Reviews Section -->
+                <div class="dashboard-section" id="manageReviews" style="display: none;">
+                    <h2>Manage Reviews</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Review ID</th>
+                                <th>Product ID</th>
+                                <th>Username</th>
+                                <th>Review</th>
+                                <th>Rating</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- reviews will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- User Details section -->
+                <div class="dashboard-section" id="userDetailsSection" style="display: none;">
+                    <h2>User Details</h2>
+                    <input type="text" id="usernameFilterUS" placeholder="Search by Username"
+                        onkeyup="filterByUsernameUS()">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Date of Birth</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- User details will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- Add discount section-->
+                <div class="dashboard-section" id="discountSection" style="display: none;">
+                    <h2>Add Discount</h2>
+                    <form id="discountForm">
+                        <div class="mb-3">
+                            <label for="discountCode" class="form-label">Discount Code:</label>
+                            <input type="text" class="form-control" id="discountCode" name="discountCode" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="discountPercent" class="form-label">Discount Percent:</label>
+                            <input type="number" class="form-control" id="discountPercent" name="discountPercent"
+                                min="1" max="100" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Set Discount</button>
+                    </form>
+                </div>
+
+                <!-- Manage Discounts section -->
+                <div class="dashboard-section" id="manageDiscountsSection" style="display: none;">
+                    <h2>Manage Discounts</h2>
+                    <div id="discountsList" class="mb-3">
+                        <!-- Discounts will be listed here -->
+                    </div>
+                </div>
+
+
+            </main>
+            <a href="#" class="theme-toggle">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-regular fa-sun"></i>
+            </a>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                            <p class="mb-0">
+                                <a href="#" class="text-muted">
+                                    <strong>Serve2U</strong>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <ul class="list-inline">
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dashboard.js"></script>
+</body>
+
+</html>

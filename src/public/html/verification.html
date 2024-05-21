@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- For this page a tutorial was followed for the authentication using cognito, as it was the first time implementing and using 
+    AWS Cognito  
+
+https://www.youtube.com/watch?v=AQfA7OQEMqg&list=PLPMbb3KXRmigGdxkvrGfR4RmsU4J78_BQ
+
+This tutorial works on setting up all the routes and endpoints necessary, giving me a base to start off with, as to which i then implemented
+to work with the input field in the form and adjusted it according to my project needs
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Your Account</title>
+    <link rel="stylesheet" href="/css/verification.css">
+</head>
+
+<body>
+    <div class="verify-container">
+        <h1>Verify Your Account</h1>
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="text" id="verificationCode" placeholder="Enter verification code">
+        <button id="verifyButton" onclick="verifyCode()">Verify</button>
+        <a href="../index.html">Back to Home</a>
+
+    </div>
+
+    <script src="/verify.js"></script>
+</body>
+
+</html>

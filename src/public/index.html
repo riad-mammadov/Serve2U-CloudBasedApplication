@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Welcome to Serve2U</title>
+</head>
+
+<body class="main-body">
+
+    <header class="main-header">
+        <nav class="navbar">
+            <img src="./html/images/Serve2ULogo.png" alt="Serve2U Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="html/order_history.html" id="orderHistoryLink" class="history-button hidden">My Order
+                        History</a></li>
+                <li><button id="logoutButton" class="logout-button hidden">Logout</button></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Stadium Experience</h1>
+            <p>Enjoy the game without missing a moment. Order snacks and beverages right to your seat!</p>
+            <button class="cta-button" id="optionsButton" onclick="showOptionsModal()">Sign Up or Log In to
+                Order</button>
+            <button class="orderbutton" id="orderLink"
+                onclick="location.href='http://localhost:8080/src/public/html/cart.html'">Order Now!</button>
+            <button class="dashboard" id="dashboardLink"
+                onclick="location.href='http://localhost:8080/src/public/html/staffdashboard.html'">Staff
+                Dashboard</button>
+
+
+        </div>
+
+        <div id="optionsModal" style="display: none;">
+            <div class="modal-content">
+                <button onclick="location.href='./html/signup.html'">Sign Up</button>
+                <button onclick="location.href='./html/login.html'">Log In</button>
+                <button onclick="location.href='./html/stafflogin.html'">Staff Log In</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-hotdog"></i>
+            <h3>In-Seat Ordering</h3>
+            <p>Get your food and drinks delivered without leaving your seat.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-ticket-alt"></i>
+            <h3>Easy Payment Service</h3>
+            <p>Quick, secure payment services handy for hassle-free ordering.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-users"></i>
+            <h3>Delivered in No Time</h3>
+            <p>Speedy delivery to satisfy your cravings.</p>
+        </div>
+    </section>
+
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+Date : 2024-05-08 17:52:54
+Directory : /Users/riadmammadov/Documents/Individual Project/Code/src/public/html
+Total : 17 files,  1317 codes, 123 comments, 293 blanks, all 1733 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          8 |        827 |         72 |        186 |      1,085 |
+| HTML       |          8 |        397 |         48 |         89 |        534 |
+| PHP        |          1 |         93 |          3 |         18 |        114 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                       | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                          |         17 |      1,317 |        123 |        293 |      1,733 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                   | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/cart.html            | HTML       |         83 |         10 |         24 |        117 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/cart.js              | JavaScript |        390 |         37 |         92 |        519 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/forgot-password.html | HTML       |        105 |          0 |         12 |        117 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/index.html           | HTML       |         60 |          0 |         15 |         75 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/index.js             | JavaScript |         74 |          9 |         22 |        105 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/login.html           | HTML       |         37 |          9 |         10 |         56 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/order_history.html   | HTML       |         29 |          1 |          6 |         36 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/orderhistory.js      | JavaScript |         82 |          5 |         18 |        105 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/signin.js            | JavaScript |         55 |          3 |         11 |         69 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/signup.html          | HTML       |         42 |          9 |          7 |         58 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/signup.js            | JavaScript |         41 |          5 |          5 |         51 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/stafflogin.html      | HTML       |         23 |         10 |          9 |         42 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/staffsignin.js       | JavaScript |         56 |          3 |         12 |         71 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/success.js           | JavaScript |         97 |          6 |         21 |        124 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/success.php          | PHP        |         93 |          3 |         18 |        114 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/verification.html    | HTML       |         18 |          9 |          6 |         33 |
+| /Users/riadmammadov/Documents/Individual Project/Code/src/public/html/verify.js            | JavaScript |         32 |          4 |          5 |         41 |
+| Total                                                                                      |            |      1,317 |        123 |        293 |      1,733 |
++--------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
