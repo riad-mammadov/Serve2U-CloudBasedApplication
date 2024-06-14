@@ -1,4 +1,4 @@
-PROJECT DEMONSTRATION LINK = https://gemoo.com/tools/upload-video/share/651611661646598144?codeId=MllLGOBx4l9JO&card=651611658156937216&origin=videolinkgenerator
+
 -------------------------
 
 PROJECT SET UP GUIDE 
