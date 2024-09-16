@@ -1,4 +1,4 @@
-Video Link: https://vimeo.com/983901055?share=copy
+
 -------------------------
 
 PROJECT SET UP GUIDE 
