@@ -1,17 +1,17 @@
-#Serve2U
-##A cloud based web application targetted at football fans who prefer the convenience and concept of ordering concession items directly to their seats, allowing them to pay via Stripe's API and recieve their orders without having to deal with the half-time/pre-game rush that is so commonly seen during matches.
+# Serve2U
+## A cloud based web application targetted at football fans who prefer the convenience and concept of ordering concession items directly to their seats, allowing them to pay via Stripe's API and recieve their orders without having to deal with the half-time/pre-game rush that is so commonly seen during matches.
 
 This application was developed as part of my Individual Project module worth 45 Credits.
 
-###Note: This project was created prior to any proficient knowledge in Node.js / React.js and was my first time attempting a fullstack application along with cloud intergration.
+### Note: This project was created prior to any proficient knowledge in Node.js / React.js and was my first time attempting a fullstack application along with cloud intergration.
 
 -------------------------
 
-##PROJECT SET UP GUIDE 
+## PROJECT SET UP GUIDE 
 
 Pre Requisites - Node.js, PHP, MySQL, Composer
 
-##Folder Structure -
+## Folder Structure -
 
 The src folder holds all of my relevant folders for my code including my servers
 
@@ -26,15 +26,14 @@ Middleware contains the middleware for the authentication
 
 Controllers contain all the controllers
 
-Note - In my keys folder there is a .txt file which contains the secret key and public key provided by Stripe. You can use the key and insert the private key in the MyServer.php ($stripe section, replace the STRIPE SECRET KEY with the actual secret key) and the public key in Cart.js (Checkoutbtn event listener function). This is only here for the marker to be able to use for convenience, and in any other case this would be stored as a .env variable.
-
-AI and Code reuse -
+## AI and Code reuse -
 
 In this project, AI and online code (ie from stackOverflow) was used only to help structure code and debug errors. For cases that i did not know how to do something, i would use these only as a guide and help me (AI was used for some of the design however as it saved a lot of time, it gave me a base to work off allowing me to move on swiftly onto more important aspects of my project). Code reuse - Tutorials and github repos have been used to help format the page and they have been referenced at the top of the files where relevant.
 
 
 
-Installation - 
+## Installation
+---------------------------------
 1) Import the code file to your machine and navigate to the project directory
 2) Install the required Node.js dependencies by running npm install, ensuring all dependencies are the same version as listed in the package.json
 
@@ -111,7 +110,3 @@ The CVV can be any 3 digit number.
 4) Upon making an order, you can open a new tab and log out, and use the staff log in provided to access the staff dashboard (For ease sake so you have access to both user and staff UIs and see how they interact with one another)
 
 5) When adding an item to the menu, ensure that it is a valid file type specified in the add item php and insert the price of the items in pence (as it is stored as an integer in my database) so an item for £14.50 will be inserted as 1450. After it successfully adds the item to the menu, refresh the Cart.html (on the users side) in order to see the new item on the menu.
-
-(In general if you expect something to happen and it doesnt, refresh the page)
-
-Riad Mammadov.
